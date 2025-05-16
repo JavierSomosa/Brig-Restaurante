@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brig - Menú</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+        }
+        
+        .menu-section {
+            transition: all 0.3s ease;
+        }
+        
+        .menu-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .price-tag {
+            background-color: #e53e3e;
+            color: white;
+            border-radius: 50px;
+            padding: 2px 10px;
+            font-weight: bold;
+        }
+        
+        .food-item {
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        
+        .food-item:last-child {
+            border-bottom: none;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrjJyiyOnABIHa3SL4EGVEV3lpuz9fPgcaMdf2hdM_yI3zpshBE4ye3mJwimKzXAumHgulknJj2i6kiYgyeNNbwbd45q0jrGyQkaRuKg_ho-Nftk0kxqObdCrfd4j8BUDLrIKNZ=s1360-w1360-h1020-rw');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #e53e3e;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero text-white py-20 px-4 md:px-0">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">BRIG RESTAURANTE</h1>
+            <p class="text-xl md:text-2xl mb-8">Sabores que inspiran, momentos que perduran</p>
+            <a href="#menu" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                Ver Menú
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-red-600">BRIG RESTAURANTE</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#entradas" class="nav-link text-gray-800 hover:text-red-600 py-2">Entradas</a>
+                    <a href="#ensaladas" class="nav-link text-gray-800 hover:text-red-600 py-2">Ensaladas</a>
+                    <a href="#sandwiches" class="nav-link text-gray-800 hover:text-red-600 py-2">Sandwiches</a>
+                    <a href="#pastas" class="nav-link text-gray-800 hover:text-red-600 py-2">Pastas</a>
+                    <a href="#especiales" class="nav-link text-gray-800 hover:text-red-600 py-2">Especiales</a>
+                </div>
+                <div class="md:hidden">
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12" id="menu">
+        <!-- Entradas -->
+        <section id="entradas" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Entradas</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-section bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1378&q=80" alt="Jamón cocido con ensalada rusa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Jamón cocido con ensalada rusa</h3>
+                        <p class="text-gray-600 mb-4">Deliciosa combinación de jamón cocido con nuestra tradicional ensalada rusa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$10.000</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-section bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80" alt="Jamón crudo con ensalada rusa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Jamón crudo con ensalada rusa</h3>
+                        <p class="text-gray-600 mb-4">Exquisito jamón crudo acompañado de nuestra clásica ensalada rusa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$11.000</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-section bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Fiambre surtido con ensalada rusa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fiambre surtido con ensalada rusa</h3>
+                        <p class="text-gray-600 mb-4">Variedad de fiambres seleccionados con ensalada rusa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$11.000</span>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More items in list format to save space -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Otras Entradas</h3>
+                    <div class="space-y-4">
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Salpicón de ave (rusa y ave)</h4>
+                                <p class="text-sm text-gray-600">Deliciosa combinación de ensalada rusa con pollo</p>
+                            </div>
+                            <span class="price-tag">$10.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Mayonesa de atún</h4>
+                                <p class="text-sm text-gray-600">Arroz, cebolla, tomate, verdeo, atún y mayonesa</p>
+                            </div>
+                            <span class="price-tag">$12.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Mozzarella a la milanesa</h4>
+                            </div>
+                            <span class="price-tag">$10.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Rabas a la romana con fritas</h4>
+                            </div>
+                            <span class="price-tag">$17.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ensaladas -->
+        <section id="ensaladas" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Ensaladas</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Featured Ensalada -->
+                <div class="menu-section bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Ensalada Diablo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Diablo</h3>
+                        <p class="text-gray-600 mb-4">Remolacha, papa, choclo, arveja y tomate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$8.000</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List of other ensaladas -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="space-y-4">
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Ceasar</h4>
+                                <p class="text-sm text-gray-600">Croutones, hojas verdes, queso y pollo</p>
+                            </div>
+                            <span class="price-tag">$10.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">La Mary</h4>
+                                <p class="text-sm text-gray-600">Lechuga, tomate, zanahoria, huevo, chaucha, arroz y atún</p>
+                            </div>
+                            <span class="price-tag">$12.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">La Peti</h4>
+                                <p class="text-sm text-gray-600">Apio, tomate, lechuga, repollo y aceitunas</p>
+                            </div>
+                            <span class="price-tag">$8.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Camarones y Kanikama</h4>
+                            </div>
+                            <span class="price-tag">$15.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Extras</h4>
+                                <p class="text-sm text-gray-600">Pollo, choclo, huevo, jamón y queso</p>
+                            </div>
+                            <span class="price-tag">$4.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sandwiches -->
+        <section id="sandwiches" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Sandwiches</h2>
+            </div>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-700">Sandwiches Fríos</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Sandwich 1 -->
+                    <div class="menu-section bg-white rounded-lg shadow-md p-6">
+                        <h4 class="font-bold text-lg mb-2">Clásico Avellaneda</h4>
+                        <p class="text-gray-600 mb-4">Jamón y queso en pebete, francés, árabe o negro</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$8.000</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Sandwich 2 -->
+                    <div class="menu-section bg-white rounded-lg shadow-md p-6">
+                        <h4 class="font-bold text-lg mb-2">Clásico Crucesita</h4>
+                        <p class="text-gray-600 mb-4">Jamón crudo y queso en pebete, francés, árabe o negro</p>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$10.000</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- More sandwiches in list format -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="space-y-4">
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Clásico Sarandí</h4>
+                                    <p class="text-sm text-gray-600">Salame y queso</p>
+                                </div>
+                                <span class="price-tag">$9.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Piñeyro</h4>
+                                    <p class="text-sm text-gray-600">Jamón crudo, pamesano y rúcula</p>
+                                </div>
+                                <span class="price-tag">$12.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Dock Sud</h4>
+                                    <p class="text-sm text-gray-600">Finas láminas de mortadela, queso, tomate y lechuga</p>
+                                </div>
+                                <span class="price-tag">$9.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Veggie</h4>
+                                    <p class="text-sm text-gray-600">Rúcula, tomate, zanahoria rallada, muzzarella, aceite de oliva y huevo</p>
+                                </div>
+                                <span class="price-tag">$12.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-gray-700">Sandwiches Calientes</h3>
+                <p class="text-gray-600 mb-6">Todos acompañados de papas fritas</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Featured Sandwich -->
+                    <div class="menu-section bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sandwich Criollo" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg mb-2">Criollo</h4>
+                            <p class="text-gray-600 mb-4">Peceto, muzzarela, tomate y chimichurri</p>
+                            <div class="flex justify-between items-center">
+                                <span class="price-tag">$16.000</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- More sandwiches -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="space-y-4">
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Chicken</h4>
+                                    <p class="text-sm text-gray-600">Pechuga de pollo, queso parmesano, panceta, tomate y salsa caesar</p>
+                                </div>
+                                <span class="price-tag">$16.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Chicken con cheddar</h4>
+                                    <p class="text-sm text-gray-600">Pechuga de pollo fileteada, panceta ahumada, queso cheddar, hojas verdes y tomate</p>
+                                </div>
+                                <span class="price-tag">$16.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">De la Finca</h4>
+                                    <p class="text-sm text-gray-600">Milanesa, muzzarella, rúcula, oliva, panceta y cebolla glaseada</p>
+                                </div>
+                                <span class="price-tag">$17.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Argentina</h4>
+                                    <p class="text-sm text-gray-600">Lomito, jamón y queso</p>
+                                </div>
+                                <span class="price-tag">$16.000</span>
+                            </div>
+                            <div class="food-item flex justify-between items-center py-2">
+                                <div>
+                                    <h4 class="font-semibold">Campeón</h4>
+                                    <p class="text-sm text-gray-600">Milanesa, lechuga, tomate</p>
+                                </div>
+                                <span class="price-tag">$15.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pastas -->
+        <section id="pastas" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Pastas Caseras</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Pasta types -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Tipos de Pasta</h3>
+                    <div class="space-y-4">
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Tallarines</h4>
+                            </div>
+                            <div class="flex space-x-4">
+                                <span class="price-tag">$6.000</span>
+                                <span class="price-tag bg-yellow-600">1/2: $4.000</span>
+                            </div>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Ñoquis</h4>
+                            </div>
+                            <div class="flex space-x-4">
+                                <span class="price-tag">$6.000</span>
+                                <span class="price-tag bg-yellow-600">1/2: $4.000</span>
+                            </div>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Ravioles (Ricota y verdura)</h4>
+                            </div>
+                            <div class="flex space-x-4">
+                                <span class="price-tag">$7.000</span>
+                                <span class="price-tag bg-yellow-600">1/2: $5.500</span>
+                            </div>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Sorrentinos (Jamón y Queso)</h4>
+                            </div>
+                            <div class="flex space-x-4">
+                                <span class="price-tag">$8.000</span>
+                                <span class="price-tag bg-yellow-600">1/2: $6.000</span>
+                            </div>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Canelones (Ricota y verdura)</h4>
+                            </div>
+                            <div class="flex space-x-4">
+                                <span class="price-tag">$7.000</span>
+                                <span class="price-tag bg-yellow-600">1/2: $5.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salsas -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Salsas</h3>
+                    <div class="space-y-4">
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">A la Manteca ó al Oliva</h4>
+                            </div>
+                            <span class="price-tag">$1.500</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Al Filetto (salsa de tomate natural)</h4>
+                            </div>
+                            <span class="price-tag">$4.500</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">A la Crema (crema de leche condimentada)</h4>
+                            </div>
+                            <span class="price-tag">$5.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Salsa Mixta (salsa blanca y filetto)</h4>
+                            </div>
+                            <span class="price-tag">$4.500</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Pesto (albahaca, aceite de oliva, parmesano, ajo y nueces)</h4>
+                            </div>
+                            <span class="price-tag">$4.500</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Scarparo (filetto, crema de leche, jamón y pesto)</h4>
+                            </div>
+                            <span class="price-tag">$5.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Bolognesa (cebolla, morrón, zanahoria, carne picada y salsa de tomate)</h4>
+                            </div>
+                            <span class="price-tag">$7.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Parisienne (champignones, ave, jamón cocido y salsa blanca)</h4>
+                            </div>
+                            <span class="price-tag">$7.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platos Especiales -->
+        <section id="especiales" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800">Platos Especiales</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Plato -->
+                <div class="menu-section bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pollo al Romero" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">1/4 Pollo al Romero con papas fritas</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="price-tag">$14.000</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More platos -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="space-y-4">
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">1/4 Pollo al Ajillo con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$14.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">1/4 Pollo a la Pimienta negra con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$14.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">1/4 Pollo al Champignon con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$16.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">1/4 Pollo al Verdeo con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$14.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Bondiola a la mostaza y miel con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$16.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Bondiola a la cerveza con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$16.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Bife de chorizo a la pimienta con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$20.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Bife a la criolla con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$17.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Bife de Chorizo 400gr con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$16.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Mini Bife de Chorizo 280gr con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$14.000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parrilla section -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Parrilla</h3>
+                    <p class="text-gray-600 mb-4">Acompañados de papas fritas, ensalada o puré</p>
+                    <div class="space-y-4">
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">1/4 Pollo deshuesado con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$12.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Costillitas de cerdo (2) con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$12.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Costillitas de cerdo a la riojana con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$17.000</span>
+                        </div>
+                        <div class="food-item flex justify-between items-center py-2">
+                            <div>
+                                <h4 class="font-semibold">Filet de Merluza con papas fritas</h4>
+                            </div>
+                            <span class="price-tag">$12.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More sections can be added here following the same pattern -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Brig de Comidas</h3>
+                    <p class="text-gray-400">Sabores auténticos, experiencias memorables.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horarios</h3>
+                    <p class="text-gray-400">Lunes a Viernes: 10:00 - 23:00</p>
+                    <p class="text-gray-400">Sábados: 11:00 - 00:00</p>
+                    <p class="text-gray-400">Domingos: 11:00 - 22:00</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Av. Siempre Viva 742, Localidad
+                    </p>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-phone mr-2"></i> +54 11 1234-5678
+                    </p>
+                    <p class="text-gray-400">
+                        <i class="fas fa-envelope mr-2"></i> contacto@brigdecomidas.com
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Brig de Comidas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Simple script for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // You can add more JavaScript functionality here for a shopping cart, etc.
+    </script>
+</body>
+</html>
